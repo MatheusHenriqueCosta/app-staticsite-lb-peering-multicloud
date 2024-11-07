@@ -1,10 +1,10 @@
 module "network" {
   source               = "./modules/network"
-  vpc10_cidr             = module.var.vpc10_cidr
-  vpc20_cidr             = module.var.vpc20_cidr
-  sn_vpc10_pub           = module.sn_vpc10_pub
-  sn_vpc10_pub2           = module.sn_vpc10_pub2
-  sn_vpc20_priv           = module.sn_vpc20_priv
+  vpc10_cidr             = module.vars.vpc10_cidr
+  vpc20_cidr             = module.vars.vpc20_cidr
+  sn_vpc10_pub           = module.vars.sn_vpc10_pub
+  sn_vpc10_pub2           = module.vars.sn_vpc10_pub2
+  sn_vpc20_priv           = module.vars.sn_vpc20_priv
 }
 
 module "compute" {
