@@ -33,6 +33,13 @@ resource "azurerm_subnet" "snvnet10pub" {
     address_prefixes     = ["10.0.1.0/24"]
 }
 
+resource "azurerm_subnet" "snvnet10pub2" {
+    name                 = "snvnet10pub2"
+    resource_group_name  = azurerm_resource_group.rg.name
+    virtual_network_name = azurerm_virtual_network.vnet10.name
+    address_prefixes     = ["10.1.1.0/24"]
+}
+
 resource "azurerm_subnet" "snvnet20priv" {
     name                 = "snvnet20priv"
     resource_group_name  = azurerm_resource_group.rg.name
